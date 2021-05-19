@@ -1,6 +1,8 @@
 # Corsali Machine Learning Technical Interview
 
-This is our project-based technical interview for machine learning engineers. It gives us a chance to see your abilities and how you approach problems. It is designed to give you creative freedom as you develop a solution, and consists of a model implementation quesion as well as non-coding questions below. Please complete both secionts
+This is our project-based technical interview for machine learning engineers. It gives us a chance to see your abilities and how you approach problems. It is designed to give you creative freedom as you develop a solution, and consists of a model implementation quesion as well as non-coding questions below. Please complete both the coding and non-coding questions.
+
+Please FORK the repository for your submission.
 
 ## Coding questions
 
