@@ -16,18 +16,27 @@ Please answer the non-coding questions below by editing this readme
 
 1. You are given a dataset of 1500 company descriptions and must classify them into 6 categories. You train a logistic regression, but it only has 60% accuracy. Your task is to identify which types of data are underrepresented in the dataset in order to prioritize
 
-_Type your answer to question 1 here_
+The question is a bit vague. If the question is asking how to figure out which classes the model is classifying poorly, then,
+checking the precision recall values for each class. Printing out the confusion matrix for instance, will help.
 
 2. You are choosing the best way to represent a text company description as an input to a model. Describe the trade offs between bag-of-words, word embeddings, and any other representation you may choose.
 
-_Type your answer to question 2 here_
+Word embeddings that have been trained on a large corpus of text help capture semantic relationships amongst words in the vector space.
+Also, they provide a more compact representation as compared to a one-hot-encoding for instance. However word embeddings might only
+be effective if most of the words in the datset are present in the embedding. Furthermore, domain specific applications might require a customized
+embedding, hence require more work to train our own embedding. 
+
+Bag-of-words (BoW) is high dimensional and sparsely representation that fails to capture the semantic relationship between words. However it may perform better than
+embeddings if the company desctioption dataset is small. Furthermore, if the company description texts are domain specific, (which they probably are), BoW could perform better.
 
 3. You decide to use a recurrent neural network for the text classification task instead. You implement the model in PyTorch and find that it's very accuracte, but that the model evaluation is too slow. How would you accelerate the model prediction time?
 
-_Type your answer to question 3 here_
+Simplifying the model. For instance, if the model is a Deep RNN, I would reduce the number of layers, or the feature dimension.
 
 ## Submission
 
-Once complete, please email us a link to your forked repo with clean, tested code.
+* Original code from https://github.com/andikarachman/News-Title-Classification/blob/master/News_Title_Classification.ipynb 
+* I used Glove embeddings https://nlp.stanford.edu/data/glove.6B.zip. To run, you'd have to have to copy the Glove embedding/ folder in the main project directory.
+* A more readable code is present in the content_classification.ipynb notebook file.
 
-Email fork link to: jobs@corsali.com or your current contact
+* Although I tried fine tuning the model, varying batch_size and learning rate, the best accuracy I got is only 32.7%. At this point, I would probably pick a different model and run more experiments to see if I can improve this result.
